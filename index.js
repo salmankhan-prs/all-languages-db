@@ -8860,7 +8860,9 @@ app.get("/api/v1/:languageID", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.json("Welcome to Languages DB");
+  res.json(
+    "Welcome to Languages DB . please use /api/v1/:languageID  or /api/v2/search/:searchTerm "
+  );
 });
 app.listen(process.env.PORT || 3000, () => {
   console.log("SERVER STARTED ");
