@@ -8858,6 +8858,10 @@ app.get("/api/v1/:languageID", (req, res) => {
   const lanuage = allLanguages.findIndex((lang) => lang.id == queryLanguage);
   res.json(allLanguages[lanuage]);
 });
+
+app.get("/", (req, res) => {
+  res.json("Welcome to Languages DB");
+});
 app.listen(process.env.PORT || 3000, () => {
   console.log("SERVER STARTED ");
 });
